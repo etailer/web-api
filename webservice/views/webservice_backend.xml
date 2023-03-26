@@ -66,11 +66,16 @@
         <field name="context">{}</field>
     </record>
 
-    <record model="ir.ui.menu" id="webservice_backend_menu">
-        <field name="name">WebService Backend</field>
-        <field name="parent_id" ref="base.menu_custom" />
-        <field name="action" ref="webservice_backend_act_window" />
-        <field name="sequence" eval="100" />
-    </record>
+    <menuitem
+        id="menu_webservice"
+        parent="base.menu_custom"
+        sequence="100"
+        action="webservice_backend_act_window"/>
+
+    <menuitem
+        id="webservice_backend_menu"
+        parent="menu_webservice"
+        sequence="10"
+        action="webservice_backend_act_window"/>
 
 </odoo>
